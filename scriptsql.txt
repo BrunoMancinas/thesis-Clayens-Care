@@ -1,0 +1,58 @@
+-- Creación de la base de datos
+CREATE DATABASE IF NOT EXISTS registro_clinico;
+USE registro_clinico;
+
+
+-- Creación de la tabla `pacientes`
+CREATE TABLE IF NOT EXISTS pacientes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    medico VARCHAR(100) NOT NULL,
+    turno VARCHAR(50) NOT NULL,
+    fecha DATE NOT NULL,
+    hora TIME NOT NULL,
+    numero_empleado VARCHAR(20) NOT NULL,
+    nombre_empleado VARCHAR(100) NOT NULL,
+    rfc VARCHAR(20) NOT NULL,
+    edad INT,
+    area VARCHAR(100) NOT NULL,
+    puesto VARCHAR(100) NOT NULL,
+    supervisor VARCHAR(100) NOT NULL,
+    diagnostico TEXT NOT NULL,
+    observaciones TEXT NOT NULL,
+    medicamento VARCHAR(100) NOT NULL,
+    numero_medicamento VARCHAR(20) NOT NULL
+);
+
+
+-- Creación de la tabla `medicamentos`
+CREATE TABLE IF NOT EXISTS medicamentos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    stock INT NOT NULL
+);
+CREATE TABLE IF NOT EXISTS examenes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_paciente INT NOT NULL,
+    fecha DATE NOT NULL,
+    tipo_examen VARCHAR(100) NOT NULL,
+    resultado TEXT NOT NULL,
+    FOREIGN KEY (id_paciente) REFERENCES pacientes(id)
+);
+CREATE TABLE IF NOT EXISTS doctores (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    dni VARCHAR(20) NOT NULL,
+    especialidad VARCHAR(100) NOT NULL,
+    telefono VARCHAR(20) NOT NULL
+);
+
+
+-- Creación de la tabla `registros`
+CREATE TABLE IF NOT EXISTS registros (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_paciente INT NOT NULL,
+    fecha DATE NOT NULL,
+    medicamento VARCHAR(100) NOT NULL,
+    cantidad INT NOT NULL,
+    FOREIGN KEY (id_paciente) REFERENCES pacientes(id)
+);

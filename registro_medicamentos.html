@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicamentos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Medicamentos</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h2>Registrar Nuevo Medicamento</h2>
+            <form action="registrar_medicamento.php" method="post">
+                <label for="nombre">Nombre del Medicamento:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <label for="stock">Stock:</label>
+                <input type="number" id="stock" name="stock" required>
+                <button type="submit">Registrar</button>
+            </form>
+
+            <h2>Actualizar Stock de Medicamento</h2>
+            <form action="actualizar_stock.php" method="post">
+                <label for="id">ID del Medicamento:</label>
+                <input type="number" id="id" name="id" required>
+                <label for="stock">Nuevo Stock:</label>
+                <input type="number" id="stock" name="stock" required>
+                <button type="submit">Actualizar</button>
+            </form>
+
+            <h2>Inventario de Medicamentos</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Stock</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </main>
+    </div>
+</body>
+</html>
+
+
+

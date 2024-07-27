@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Paciente</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Registrar Paciente</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <form action="registrar_paciente.php" method="post">
+
+
+
+                <label for="medico">Médico que Atiende:</label>
+                <input type="text" id="medico" name="medico" required><br><br>
+        
+                <label for="turno">Turno:</label>
+                <input type="text" id="turno" name="turno" required><br><br>
+        
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" required><br><br>
+        
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" name="hora" required><br><br>
+        
+                <label for="numero_empleado">Número de Empleado:</label>
+                <input type="text" id="numero_empleado" name="numero_empleado" required><br><br>
+        
+                <label for="nombre_empleado">Nombre del Empleado:</label>
+                <input type="text" id="nombre_empleado" name="nombre_empleado" required><br><br>
+        
+                <label for="rfc">RFC:</label>
+                <input type="text" id="rfc" name="rfc" required><br><br>
+        
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" name="edad" required><br><br>
+        
+                <label for="area">Área:</label>
+                <input type="text" id="area" name="area" required><br><br>
+        
+                <label for="puesto">Puesto:</label>
+                <input type="text" id="puesto" name="puesto" required><br><br>
+        
+                <label for="supervisor">Supervisor:</label>
+                <input type="text" id="supervisor" name="supervisor" required><br><br>
+        
+                <label for="diagnostico">Diagnóstico:</label><br>
+                <textarea id="diagnostico" name="diagnostico" rows="4" cols="50" required></textarea><br><br>
+        
+                <label for="observaciones">Observaciones:</label><br>
+                <textarea id="observaciones" name="observaciones" rows="4" cols="50" required></textarea><br><br>
+        
+                <label for="medicamento">Nombre del Medicamento:</label>
+                <input type="text" id="medicamento" name="medicamento" required><br><br>
+        
+                <label for="numero_medicamento">Número de Medicamento:</label>
+                <input type="text" id="numero_medicamento" name="numero_medicamento" required><br><br>
+                <button type="submit">Registrar</button>
+            </form>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+

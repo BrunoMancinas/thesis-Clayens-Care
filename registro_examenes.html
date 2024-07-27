@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Examen</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Registrar Examen</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <form action="registrar_examen.php" method="post">
+                <label for="id_paciente">Numero de empleado:</label>
+                <input type="text" id="id_paciente" name="id_paciente" required>
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" required>
+                <label for="tipo_examen">Tipo de Examen:</label>
+                <input type="text" id="tipo_examen" name="tipo_examen" required>
+                <label for="resultado">Resultado:</label>
+                <textarea id="resultado" name="resultado" required></textarea>
+                <button type="submit">Registrar</button>
+            </form>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
